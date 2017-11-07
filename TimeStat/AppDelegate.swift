@@ -16,8 +16,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        // Initialize the Core Data.
         let coreDataManager = CoreDataManager(modelName: "TimeStat")
         print(coreDataManager.managedObjectContext)
+        
+        // Do preloading to register Idle task for newly installed application.
+        let defaults = UserDefaults.standard
+        let isPreloaded = defaults.bool(forKey: "isPreloaded")
+        if !isPreloaded {
+            let managedObjectContext = coreDataManager.managedObjectContext
+            let entityDescription = NSEntityDescription.entity(forEntityName: "TaskEntity", in: managedObjectContext)
+            let taskIdle = NSManagedObject(entity: entityDescription!, insertInto: managedObjectContext)
+            print(taskIdle)
+            
+            do {
+                try managedObjectContext.save()
+            } catch {
+                fatalError("Unable to Create Idle Task")
+            }
+            
+            defaults.set(true, forKey: "isPreload")
+        }
+        
         return true
     }
 
@@ -42,7 +62,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-    // MARK: - Core Data stack    
 }
 
