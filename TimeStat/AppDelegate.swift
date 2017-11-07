@@ -27,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let managedObjectContext = coreDataManager.managedObjectContext
             let entityDescription = NSEntityDescription.entity(forEntityName: "TaskEntity", in: managedObjectContext)
             let taskIdle = NSManagedObject(entity: entityDescription!, insertInto: managedObjectContext)
+            taskIdle.setValue("Idle", forKey: "title")
+            taskIdle.setValue(Date(), forKey: "created_at")
             print(taskIdle)
             
             do {
