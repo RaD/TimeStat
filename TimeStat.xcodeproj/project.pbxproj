@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D4AED8D1FB23682003AD447 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 1D4AED8C1FB23682003AD447 /* README.md */; };
 		1DF01FAE1FB20EA300E40F61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF01FAD1FB20EA300E40F61 /* AppDelegate.swift */; };
 		1DF01FB01FB20EA300E40F61 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF01FAF1FB20EA300E40F61 /* FirstViewController.swift */; };
 		1DF01FB21FB20EA300E40F61 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF01FB11FB20EA300E40F61 /* SecondViewController.swift */; };
 		1DF01FB51FB20EA300E40F61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DF01FB31FB20EA300E40F61 /* Main.storyboard */; };
 		1DF01FB71FB20EA300E40F61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DF01FB61FB20EA300E40F61 /* Assets.xcassets */; };
 		1DF01FBA1FB20EA300E40F61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1DF01FB81FB20EA300E40F61 /* LaunchScreen.storyboard */; };
+		1DF01FC81FB22AB500E40F61 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF01FC71FB22AB500E40F61 /* CoreDataManager.swift */; };
+		1DF01FCC1FB232FE00E40F61 /* TimeStat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1DF01FCA1FB232FE00E40F61 /* TimeStat.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D4AED8C1FB23682003AD447 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		1DF01FAA1FB20EA300E40F61 /* TimeStat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeStat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF01FAD1FB20EA300E40F61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DF01FAF1FB20EA300E40F61 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		1DF01FB61FB20EA300E40F61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DF01FB91FB20EA300E40F61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1DF01FBB1FB20EA300E40F61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DF01FC71FB22AB500E40F61 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		1DF01FCB1FB232FE00E40F61 /* TimeStat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TimeStat.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +46,7 @@
 		1DF01FA11FB20EA200E40F61 = {
 			isa = PBXGroup;
 			children = (
+				1D4AED8C1FB23682003AD447 /* README.md */,
 				1DF01FAC1FB20EA300E40F61 /* TimeStat */,
 				1DF01FAB1FB20EA300E40F61 /* Products */,
 			);
@@ -56,6 +63,8 @@
 		1DF01FAC1FB20EA300E40F61 /* TimeStat */ = {
 			isa = PBXGroup;
 			children = (
+				1DF01FC91FB2323600E40F61 /* CoreData */,
+				1DF01FC61FB22AA200E40F61 /* Managers */,
 				1DF01FAD1FB20EA300E40F61 /* AppDelegate.swift */,
 				1DF01FAF1FB20EA300E40F61 /* FirstViewController.swift */,
 				1DF01FB11FB20EA300E40F61 /* SecondViewController.swift */,
@@ -65,6 +74,22 @@
 				1DF01FBB1FB20EA300E40F61 /* Info.plist */,
 			);
 			path = TimeStat;
+			sourceTree = "<group>";
+		};
+		1DF01FC61FB22AA200E40F61 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				1DF01FC71FB22AB500E40F61 /* CoreDataManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		1DF01FC91FB2323600E40F61 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1DF01FCA1FB232FE00E40F61 /* TimeStat.xcdatamodeld */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D4AED8D1FB23682003AD447 /* README.md in Sources */,
+				1DF01FC81FB22AB500E40F61 /* CoreDataManager.swift in Sources */,
 				1DF01FB21FB20EA300E40F61 /* SecondViewController.swift in Sources */,
 				1DF01FAE1FB20EA300E40F61 /* AppDelegate.swift in Sources */,
 				1DF01FB01FB20EA300E40F61 /* FirstViewController.swift in Sources */,
+				1DF01FCC1FB232FE00E40F61 /* TimeStat.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,8 +332,22 @@
 				1DF01FC01FB20EA300E40F61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1DF01FCA1FB232FE00E40F61 /* TimeStat.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1DF01FCB1FB232FE00E40F61 /* TimeStat.xcdatamodel */,
+			);
+			currentVersion = 1DF01FCB1FB232FE00E40F61 /* TimeStat.xcdatamodel */;
+			path = TimeStat.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1DF01FA21FB20EA200E40F61 /* Project object */;
 }
